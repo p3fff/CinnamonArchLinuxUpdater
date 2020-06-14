@@ -32,18 +32,14 @@ src="ArchLinuxUpdaterMenu.png" style="max-width:50%"></a></td></tr></table>
 
 ## Installation
 
-Unpack the downloaded archive in your personal or system applet directory of
-cinnamon
+Go to [GitHub-Repository](https://github.com/p3fff/CinnamonArchLinuxUpdater.git) download the ZIP-file. Unpack the downloaded archive. You can decide where to install the applet.
 
-    > # personal directory
-    > cd .local/share/cinnamon/applets
-    > tar xzf archlinux-updater.tgz
+    > # personal directory for your use only
+    > mv <path-to-zip-content>/arch-updater@p3fff.de ~/.local/share/cinnamon/applets
    
     > # alternatively for all users
-    > cd /usr/share/cinnamon/applets
-    > sudo tar xzf <path-to-archive>/archlinux-updater.tgz
-    > # check if the rights for reading and entering directories 
-    > #   for 'other' are set propperly
+    > sudo mv <path-to-zip-content>/arch-updater@p3fff.de /usr/share/cinnamon/applets
+    > sudo chown -R root:root /usr/share/cinnamon/applets/arch-updater@p3fff.de
 
 After that you can select the applet for one of your panels. If you are
 using gnome-terminal for running the upgrade command which is set by
