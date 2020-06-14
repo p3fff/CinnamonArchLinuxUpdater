@@ -1,0 +1,107 @@
+{
+    "head-apearance": {
+        "type": "header",
+        "description": "Appearance and behavior"
+    },
+    
+    "boot-wait": {
+        "type": "spinbutton",
+        "default": 5,
+        "min": 5,
+        "max": 5000,
+        "step": 10,
+        "description": "Time to wait before first check (seconds)"
+    },
+
+    "check-interval": {
+        "type": "spinbutton",
+        "default": 5,
+        "min": 5,
+        "max": 2000,
+        "step": 10,
+        "description": "Interval between updates check (minutes)"
+    },
+
+
+    "always-visible": {
+        "type": "switch",
+        "default": false,
+        "description": "Indicator is always visble"
+    },
+
+    "max-items-to-open-automatically": {
+        "type": "spinbutton",
+        "default": 25,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "description": "Maximum mumber of items to open update list automatically"
+    },
+
+
+
+    "strip-versions": {
+        "type": "switch",
+        "default": true,
+        "description": "do not show version numbers in list"
+    },
+
+    "cmd-separator" : {
+        "type" : "separator",
+        "height" : 400
+    },
+    
+    "head-commands": {
+        "type": "header",
+        "description": "Commands to run"
+    },
+    
+    "label-check-cmd" : {
+        "type" : "label",
+        "description" : "Command to run to check for updated packages."
+    },
+    
+    "check-cmd": {
+        "type": "entry",
+        "default": "/usr/bin/checkupdates",
+        "indent": true,
+        "description": "",
+        "expand-width": true
+    },
+    
+    "label-update-cmd" : {
+        "type" : "label",
+        "description" : "Command to run to update packages."
+    },
+    
+    "update-cmd": {
+        "type": "entry",
+        "default": "gnome-terminal -e 'sh -c  \"sudo pacman -Syu ; echo Done - Press enter to exit; read \"'",
+        "indent": true,
+        "description": "",
+        "expand-width": true
+    },
+    "cmd-separator-2" : {
+        "type" : "separator",
+        "height" : 400
+    },
+    
+    "head-pathes": {
+        "type": "header",
+        "description": "Pathes"
+    },
+    
+    "label-pacman-dir" : {
+        "type" : "label",
+        "description" : "Pacman directory to monitor for installed updates."
+    },
+    
+    "pacman-dir": {
+        "type": "entry",
+        "default": "/var/lib/pacman/local",
+        "indent": true,
+        "description": "",
+        "expand-width": true
+    }
+}
+

@@ -1,0 +1,6 @@
+{
+ "uuid": "arch-updater@p3fff.de",
+ "name": "Arch Linux Updater",
+ "description": "Managing arch linux updates",
+ "icon": "arch-uptodate-symbolic"
+}
