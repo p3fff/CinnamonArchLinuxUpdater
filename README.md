@@ -48,6 +48,22 @@ package:
 
     > pacman -S gnome-terminal
 
+
+Cinnamon Arch Linux Updater uses `checkupdates` to check for updates. Therefore, you need to install `pacman-contrib`:
+```bash
+sudo pacman -S pacman-contrib
+```
+
+Try running `checkupdates` in your terminal, if it gives you this error:
+```
+==> ERROR: Cannot fetch updates
+```
+
+try running this instead (more info on this issue here: https://bbs.archlinux.org/viewtopic.php?id=223384):
+```bash
+CHECKUPDATES_DB="$HOME"/tmpdb checkupdates
+```
+
 ## Configuration
 
 Normally everything is initially set up correctly. But you might want to
