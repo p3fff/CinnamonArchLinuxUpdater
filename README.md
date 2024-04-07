@@ -41,6 +41,17 @@ Go to [GitHub-Repository](https://github.com/p3fff/CinnamonArchLinuxUpdater.git)
     > sudo mv <path-to-zip-content>/arch-updater@p3fff.de /usr/share/cinnamon/applets
     > sudo chown -R root:root /usr/share/cinnamon/applets/arch-updater@p3fff.de
 
+Cinnamon Arch Linux Updater uses `checkupdates` to check for updates.
+Therefore, you need to install `pacman-contrib`:
+    > sudo pacman -S acman-contrib
+
+Try running `checkupdates` in your terminal, if it gives you this error:
+    ==> ERROR: Cannot fetch updates
+you have to set the environment variable `CHECKUPDATES_DB` in one of
+your provile scripts (more info on this issue here:
+https://bbs.archlinux.org/viewtopic.php?id=223384):
+    > export CHECKUPDATES_DB="$HOME"/tmpdb checkupdat
+
 After that you can select the applet for one of your panels. If you are
 using gnome-terminal for running the upgrade command which is set by
 default (see configuration below) you have to install the corresponding
