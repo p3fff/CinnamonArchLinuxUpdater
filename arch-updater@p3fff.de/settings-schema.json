@@ -23,12 +23,6 @@
     },
 
 
-    "always-visible": {
-        "type": "switch",
-        "default": false,
-        "description": "Indicator is always visble"
-    },
-
     "max-items-to-open-automatically": {
         "type": "spinbutton",
         "default": 25,
